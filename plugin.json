@@ -15,12 +15,12 @@
 	"sections": {
 		"description": "",
 		"installation": "",
-		"changelog": "initial release",
+		"changelog": "initial release"
 	},
-	
-	"icons" : {
-		"1x" : "https://s3.envato.com/files/298541584/avatar80x80-2.jpg",
-    },
+
+	"icons": {
+		"1x": "https://s3.envato.com/files/298541584/avatar80x80-2.jpg"
+	},
 
 	"banners": {
 		"low": "http://w-shadow.com/files/external-update-example/assets/banner-772x250.png",
