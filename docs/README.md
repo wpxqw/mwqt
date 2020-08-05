@@ -1,5 +1,5 @@
 ## Introduction
-Woocommerce Quote Inquiry & Management is frontend quote inquiry and backend quote managment plugin for Woocommerce. It lets shop manager receive quote inquiries from registered, guest or both types of customers for products in cart and view, update, delete inquiries, turn quote inquiry into formal quote or create new quotes in backend.
+WC Quote Inquiry & Management is frontend quote inquiry and backend quote managment plugin for Woocommerce. It lets shop manager receive quote inquiries from registered, guest or both types of customers for products in cart and view, update, delete inquiries, turn quote inquiry into formal quote or create new quotes in backend.
 
 ### Features
 - Receive quote inquires from registered, guest or both types of customers.
@@ -32,21 +32,27 @@ Woocommerce Quote Inquiry & Management is frontend quote inquiry and backend quo
 
 ## Installation
 
-### Software Requirements
-- PHP 7.0.0+
-- Wordpress 5.0.0+
-- Woocommerce 4.0.0+
-- Contact Form 7 5.0.0+ (optional)
+### Minimum Requirements
 
-### Instructions
-1. Copy the plugin folder in WP_ROOT/wp-content/plugins folder or use Add Plugin menu page in admin dashboard to upload the plugin
-2. Activate the plugin
+- PHP 7.2 or greater is recommended
+- MySQL 5.6 or greater is recommended
+- Wordpress 5.0 or greater
+- Woocommerce 4.0 or greater
+- (optional) Contact Form 7 5.0 or greater
+
+### Manual installation =
+
+Manual installation method requires downloading this plugin and uploading it to your web server via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation).
+
+### Updating
+
+Plugin will automatically check for new version and show update notification in Wordpress dashboard with one-click upgrade link.
 
 ### Configuration
 - Open Dashboard -> Quotes -> Settings page.
 - Enable plugin for registered, guest or both type of customers.
 - Select quote inquiry form from the list of all Contact Form 7's forms and Save Changes.
-- Tell which field of the inquiry form to use as email, first/full name and last name fields. (Emails will not be sent to guest customer if you don't select one of the email fields of selecteed quote inquiry form.)
+- Select which field of the quote inquiry form to use as email, first/full name or last name fields. (Emails will not be sent to guest customer if you select a quote inquiry form for them and don't select one of the email fields of the selected form.)
 - Change default settings as needed. (Default settings turn cart into quote basket.)
 
 ## Settings
@@ -139,3 +145,12 @@ If your form has single name field, leave it blank. Otherwise, select last name 
 
 #### Guest Customers
 Same as Register Customers
+
+## Frequently Asked Questions
+
+- **Can i use a form created with other form plugins (e.g. Gravity Forms) as quote inquiry form?**
+
+Currently, only Contact Form 7's forms are supported. Gravity Forms's forms will be supported in next version. Other form plugins may be supported in future.
+
+- **Do you have any known Issue to tell?**
+Currently, fees added on cart page or shipping cost calculated on cart page will not be visible on quote inquiry edit screen in backend. The Quote Total (referred as Order Total ) on quote inquiry edit screen will include both fees and shipping cost of cart page.
