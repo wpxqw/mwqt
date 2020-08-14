@@ -1,12 +1,12 @@
 {
 	"name": "Woocommerce Quote Inquiry & Management",
-	"version": "3.0.0",
-	"download_url": "https://drive.google.com/uc?id=1h7M3hpk_ezoh_yIitXHBRk8YNl4AVeAl&export=download",
+	"version": "1.1.0",
+	"download_url": "https://drive.google.com/u/0/uc?id=1Jm9evkuz1kFd9dCA_-qLMvX6toRTFr2u&export=download",
 
-	"homepage": "https://codecanyon.net/user/wpxqw",
+	"homepage": "https://codecanyon.net/item/woocommerce-quote-inquiry-management/28043775",
 	"requires": "5.0.0",
 	"tested": "5.4.0",
-	"last_updated": "2020-08-05 00:00:00",
+	"last_updated": "2020-08-13 00:00:00",
 	"upgrade_notice": "",
 
 	"author": "wpxqw",
@@ -15,7 +15,7 @@
 	"sections": {
 		"description": "",
 		"installation": "",
-		"changelog": "initial release"
+		"changelog": "<p><strong>Version 1.1.0</strong></p><ul><li><p>Added Contact Form 7 mail-tag <strong>[mwqt-quote-inquiry]</strong> to render cart items in the email sent by Contact Form 7 on quote form submission. This mail-tag will render cart items in plain text or html based on \"Use HTML content type\" input of Mail tab of quote form.</p><p><img style=\"max-width:100%;\" src=\"https://raw.githubusercontent.com/wpxqw/mwqt/master/docs/mail-tag-html-small.jpg\" alt=\"mail-tag output as html\" title=\"mail-tag output as html\"></p><p><img style=\"max-width:100%;\" src=\"https://raw.githubusercontent.com/wpxqw/mwqt/master/docs/mail-tag-text.jpg\" alt=\"mail-tag output as html\" title=\"mail-tag output as html\"></p></li></ul><p><strong>Version 1.0.0</strong></p><p>Initial Release</p>"
 	},
 
 	"icons": {
