@@ -62,7 +62,7 @@ Plugin will automatically check for new version and show update notification in 
 #### Product Level
 - Open "Products" page in Dashboard (Dashboard -> Products).
 - Open the product you want to edit from the product list.
-- Scroll down to data panels and open "Advanced Cart 2 Quote" data panel.
+- Scroll down to data panels and open "Adv. Cart 2 Quote" data panel.
 - Turn on "Enable Configuration" to override global settings for this product.
 - Hide price, set "Add to cart" button text and enable inquiry for this product.
 
@@ -73,6 +73,7 @@ Plugin will automatically check for new version and show update notification in 
 - Registered Customers
 - Guest Customers
 - Contact Form 7 (It will be only added if Contact Form 7 plugin is active)
+- Gravity Forms (It will be only added if Gravity Forms plugin is active)
 
 Registered Customers and Guest Customers tabs have similar settings.
 
@@ -161,10 +162,8 @@ Same as Register Customers
 ### Gravity Forms Settings
 Same as Contact Form 7 settings
 
-![alt Advanced Cart To Quote plugin - Contact Form 7 settings](gf-settings.jpg)
-
 ## Product Setttings
-![alt Advanced Cart To Quote plugin settings](product-settings.jpg)
+![alt Advanced Cart To Quote plugin settings](mwqt-product-settings.jpg)
 
 ## Behavior added in v1.3
 - To prevent the customer from inferring the price of a hidden price product from Subtotal and Total of cart, Subtotal and Total will be hidden if cart has at least one hidden priced product.
@@ -182,4 +181,4 @@ Same as Contact Form 7 settings
 Currently, Contact Form 7 and Gravity Forms are supported. Other form plugins may be supported in future.
 
 - **Do you have any known issue to tell?**
-Currently, fees added on cart page or shipping cost calculated on cart page will not be visible on quote inquiry edit screen in backend. The Quote Total (referred as Order Total ) on edit screen will include both fees and shipping cost of cart page. Cart fees and shipping cost will be made visible on edit screen in future (more likely in next version).
+Currently, fees added on cart page or shipping cost calculated on cart page will not be visible on quote inquiry edit screen in backend. The Quote Total (referred as Order Total ) on edit screen will include both fees and shipping cost of cart page.
