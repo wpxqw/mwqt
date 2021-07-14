@@ -62,7 +62,7 @@ Plugin will automatically check for new version and show update notification in 
 #### Product Level
 - Open "Products" page in Dashboard (Dashboard -> Products).
 - Open the product you want to edit from the product list.
-- Scroll down to data panels and open "Adv. Cart 2 Quote" data panel.
+- Scroll down to data panels and open "Adv. Cart 2 Quote" data panel. [Screenshot](#product-settings)
 - Turn on "Enable Configuration" to override global settings for this product.
 - Hide price, set "Add to cart" button text and enable inquiry for this product.
 
