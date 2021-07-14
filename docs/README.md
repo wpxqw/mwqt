@@ -162,7 +162,7 @@ Same as Register Customers
 ### Gravity Forms Settings
 Same as Contact Form 7 settings
 
-## Product Setttings
+## Product Settings
 ![alt Advanced Cart To Quote plugin settings](mwqt-product-settings.jpg)
 
 ## Behavior added in v1.3
