@@ -1,8 +1,9 @@
 ## Introduction
-WC Quote Inquiry & Management is frontend quote inquiry and backend quote managment plugin for Woocommerce. It lets shop manager receive quote inquiries from registered, guest or both types of customers for products in cart and view, update, delete inquiries, turn quote inquiry into formal quote or create new quotes in backend.
+WooCommerce Advanced Cart To Quote is frontend quote inquiry and backend quote managment plugin for Woocommerce. It lets shop manager receive quote inquiries for all or selected products from registered, guest or both types of customers by turning shopping cart into quote cart and using an inquiry form created using either Contact Form 7 or Gravity Forms. Shop manager can also view, update, delete inquiries, turn quote inquiry into formal quote or create new quotes in backend.
 
 ### Features
-- Receive quote inquires from registered, guest or both types of customers.
+- Receive quote inquiries for all or selected products from registered, guest or both types of customers.
+- Configure at global level or product level.
 - Manage quote inquiries - view, update, delete.
 - Create new quotes.
 - Turn quote inquiry into formal quote by filling up product prices, adding fees, adjusting taxes and setting shipping cost.
@@ -30,17 +31,18 @@ WC Quote Inquiry & Management is frontend quote inquiry and backend quote managm
 - Separate settings for registered and guest  customers.
 - Master switch to make all settings ineffective for registered or guest customers.
 
+
 ## Installation
 
 ### Minimum Requirements
 
 - PHP 7.2 or greater is recommended
-- MySQL 5.6 or greater is recommended
 - Wordpress 5.0 or greater
-- Woocommerce 4.0 or greater
+- Woocommerce 4.1 or greater
 - (optional) Contact Form 7 5.0 or greater
+- (optional) Gravity Forms 2.0 or greater
 
-### Manual installation =
+### Manual installation
 
 Manual installation method requires downloading this plugin and uploading it to your web server via your favorite FTP application. The WordPress codex contains [instructions on how to do this here](https://wordpress.org/support/article/managing-plugins/#manual-plugin-installation).
 
@@ -49,14 +51,23 @@ Manual installation method requires downloading this plugin and uploading it to 
 Plugin will automatically check for new version and show update notification in Wordpress dashboard with one-click upgrade link.
 
 ### Configuration
+
+#### Global Level
 - Open Dashboard -> Quotes -> Settings page.
 - Enable plugin for registered, guest or both type of customers.
-- Select quote inquiry form from the list of all Contact Form 7's forms and Save Changes.
-- Select which field of the quote inquiry form to use as email, first/full name or last name fields. (Emails will not be sent to guest customer if you select a quote inquiry form for them and don't select one of the email fields of the selected form.)
-- Change default settings as needed. (Default settings turn cart into quote basket.)
+- Change default settings as needed (Default settings turn cart into quote basket). [Read More](#global-settings "Read more about global settings")
+- Select quote inquiry form and Save Changes. [Read More](#contact-form-7-settings "Read more about inquiry form settings")
+- Select which field of the quote inquiry form to use as email, first/full name or last name field. (Emails will not be sent to guest customer if you select a quote inquiry form for them and don't select one of the email fields of the selected form.)
 
-## Settings
-![alt Woocommerce Quote Inquiry & Management plugin settings](settings.jpg)
+#### Product Level
+- Open "Products" page in Dashboard (Dashboard -> Products).
+- Open the product you want to edit from the product list.
+- Scroll down to data panels and open "Advanced Cart 2 Quote" data panel.
+- Turn on "Enable Configuration" to override global settings for this product.
+- Hide price, set "Add to cart" button text and enable inquiry for this product.
+
+## Global Settings
+![alt Advanced Cart To Quote plugin settings](settings.jpg)
 
 ### Tabs
 - Registered Customers
@@ -77,7 +88,7 @@ Turn plugin on/off
 Hide price and set text to show as price for all products except External products in Shop, Cart, Single Product, Taxonomy (product-cat, product-tag) pages, Minicart, WC Widgets, Storefront theme's Minicart link and (sub)total in Cart and Minicart.
 
 ##### Hide Price
-Enabling it will hide price and (sub)total.
+Enabling it will hide price and (sub)total. If [Revoke Checkout Access](#revoke-checkout-access) is disabled, no hidden priced product will appear on checkout page - it will be removed from cart when user opens the checkout page.
 
 ##### Show As Price
 If Hide Price is enabled, this text will be shown as price. Leave it blank (not recommended) to only hide price and (sub)total.
@@ -125,8 +136,9 @@ Disable Quote Inquiry Acknowledgement email. This email is sent to customer on q
 ##### Disable New Inquiry Email
 Disable New Quote Inquiry email. This email is sent to configured recipients (by default, Admin) on quote inquiry. This setting has precedence over Emails tabs of WC->Settings page.
 
-### Setting Sections (of Contact Form 7 tab)
-![alt Woocommerce Quote Inquiry & Management plugin - Contact Form 7 settings](cf7-settings.jpg)
+### Contact Form 7 Settings
+
+![alt Advanced Cart To Quote plugin - Contact Form 7 settings](cf7-settings.jpg)
 
 #### Registered Customers
 Email, First/Full Name, Last Name fields will only be (re)populated after you select a form and save changes.
@@ -146,11 +158,28 @@ If your form has single name field, leave it blank. Otherwise, select last name 
 #### Guest Customers
 Same as Register Customers
 
+### Gravity Forms Settings
+Same as Contact Form 7 settings
+
+![alt Advanced Cart To Quote plugin - Contact Form 7 settings](gf-settings.jpg)
+
+## Product Setttings
+![alt Advanced Cart To Quote plugin settings](product-settings.jpg)
+
+## Behavior added in v1.3
+- To prevent the customer from inferring the price of a hidden price product from Subtotal and Total of cart, Subtotal and Total will be hidden if cart has at least one hidden priced product.
+- To allow the checkout of non-hidden priced products, hidden priced products will not be shown on checkout page - they will be removed from cart when customer visits checkout page.
+- Quote inquiry form will be shown only if cart has at least one product for which inquiry is enabled.
+- Quote inquiry (for admin) and acknowledgement (for customer) emails will only include the cart products for which inquiry is enabled.
+- Hiding the price of a Grouped product will not automatically hide the price of its child products in cart. It will only hide the price of child products on single product of a Grouped product.
+- Order of the products (cart items) in the cart will change after quote inquiry form submission. This new order will only be visible after cart page is reloaded. The new order will be:
+   1. products for which inquiry is enabled
+   2. product for which inquiry is not enabled
+
 ## Frequently Asked Questions
 
 - **Can i use a form created with other form plugins (e.g. Gravity Forms) as quote inquiry form?**
+Currently, Contact Form 7 and Gravity Forms are supported. Other form plugins may be supported in future.
 
-Currently, only Contact Form 7's forms are supported. Gravity Forms's forms will be supported in next version. Other form plugins may be supported in future.
-
-- **Do you have any known Issue to tell?**
-Currently, fees added on cart page or shipping cost calculated on cart page will not be visible on quote inquiry edit screen in backend. The Quote Total (referred as Order Total ) on quote inquiry edit screen will include both fees and shipping cost of cart page.
+- **Do you have any known issue to tell?**
+Currently, fees added on cart page or shipping cost calculated on cart page will not be visible on quote inquiry edit screen in backend. The Quote Total (referred as Order Total ) on edit screen will include both fees and shipping cost of cart page. Cart fees and shipping cost will be made visible on edit screen in future (more likely in next version).
